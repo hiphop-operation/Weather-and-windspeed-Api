@@ -1,0 +1,60 @@
+body{
+    background-color: black;
+    color: white;
+    font-size: 4em;
+    overflow: scroll;
+}
+
+
+
+.main-container {
+    
+    
+    max-width: 72em;
+    font-family: monospace;
+    margin: 0 auto;
+}
+
+.data-results {
+    background-color: aliceblue;
+    overflow: scroll;
+}
+
+.control-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 1em;
+    height: 4rem;
+    max-width: 100%;
+    
+}
+
+#fetchButton {
+    height: 4rem;
+    border-radius: 8px;
+}
+
+.url-input {
+    margin: 1em;
+    width: 100%;
+}
+
+.map-tester-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
+
+}
+
+
+#map, #tester{ 
+    height: 20rem;
+    max-width: 36rem;
+    width: 50%;
+    border-radius: 8px;
+    overflow: hidden;
+}
