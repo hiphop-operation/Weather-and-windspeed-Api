@@ -41,10 +41,7 @@ body{
 }
 
 .map-tester-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
+  
     gap: 1rem;
     width: 100%;
 
