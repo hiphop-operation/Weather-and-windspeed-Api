@@ -16,24 +16,17 @@
         
         <!-- Input controls like textboxes and buttons -->
         <div class="control-panel">
-            <button id="fetchButton" class="control-button">GET</button>
+            <button id="weatherButton" class="control-button">Get Weather</button>
             <!-- <input type="text" class="url-input" id="urlTextBox"> -->
         </div>
         
 
         
 
-        <div id="latitudeReadout">           
-        </div>
-
-        <div id="longitudeReadout">           
-        </div>
-        
-        <div id="currentTemp">
-        </div>
-
-        <div id="currentWind">
-        </div>
+        <div id="latitudeReadout"></div>
+        <div id="longitudeReadout"></div>
+        <div id="currentTemp"></div>
+        <div id="currentWind"></div>
 
         <div class="map-tester-container">
             <div id="map"></div>
@@ -44,18 +37,18 @@
         <!-- Raw printout of the result-->
         <div class="data-results" id="mainResults"></div>
     </div>
-
+    <h2> Device Orientation</h2>
     <div id="alphaReadout">z-axis rotation: 0°</div>
     <div id="betaReadout">x-axis rotation: 0°</div>
     <div id="gammaReadout">y-axis rotation: 0°</div>
-    <button id="fetchButton">Request Orientation Permission</button>
+    <button id="orientationButton">Request Orientation Permission</button>
 
-
-    <video id="videoElement" width="640" height="480" autoplay></video>
-
-    <button id="startButton">Start Video/Audio</button>
-    <button id="stopButton">Stop Video/Audio</button>
-
+    <div id="mediaSteamSection">
+        <h2>Video/Audio Stream</h2>
+        <video id="videoElement" width="640" height="480" autoplay></video>
+        <button id="startButton">Start Video/Audio</button>
+        <button id="stopButton">Stop Video/Audio</button>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>

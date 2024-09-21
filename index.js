@@ -1,5 +1,5 @@
 // HTML elements
-const fetchButton = document.getElementById("fetchButton");
+const weatherButton = document.getElementById("weatherButton");
 const dataResultArea = document.getElementById("mainResults");
 const latitudeReadout = document.getElementById("latitudeReadout");
 const longitudeReadout = document.getElementById("longitudeReadout");
@@ -177,7 +177,7 @@ const myClickHandler = async function (event) {
 
 
 // Attach the click event handler to the button
-fetchButton.addEventListener('click', myClickHandler);
+orientationButton.addEventListener('click', myClickHandler);
 
 function updateOrientation(event) {    
     // Update the orientation display
