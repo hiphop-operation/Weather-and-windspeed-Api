@@ -174,6 +174,8 @@ const myClickHandler = async function (event) {
     });
 }
 
+
+
 // Attach the click event handler to the button
 fetchButton.addEventListener('click', myClickHandler);
 
@@ -187,3 +189,42 @@ function updateOrientation(event) {
 window.addEventListener('deviceorientation', updateOrientation, true);
 
 if (DeviceOrientationEvent.requestPermission) { DeviceOrientationEvent.requestPermission(); };
+
+
+
+
+// Get the video element
+const videoElement = document.getElementById('videoElement');
+const startButton = document.getElementById('startButton');
+const stopButton = document.getElementById('stopButton');
+
+let mediaStream = null;
+
+// Function to start capturing audio and video
+async function startMedia() {
+    try {
+        // Get the user's video and audio stream
+        mediaStream = await navigator.mediaDevices.getUserMedia({
+            video: true,   // Access video (camera)
+            audio: true    // Access audio (microphone)
+        });
+
+        // Set the video element's source to the media stream
+        videoElement.srcObject = mediaStream;
+    } catch (error) {
+        console.error('Error accessing media devices.', error);
+    }
+}
+
+// Function to stop the media stream
+function stopMedia() {
+    if (mediaStream) {
+        const tracks = mediaStream.getTracks();
+        tracks.forEach(track => track.stop());  // Stop all tracks (audio and video)
+        videoElement.srcObject = null;
+    }
+}
+
+// Event listeners for start and stop buttons
+startButton.addEventListener('click', startMedia);
+stopButton.addEventListener('click', stopMedia);
