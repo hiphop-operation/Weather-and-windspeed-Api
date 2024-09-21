@@ -176,3 +176,14 @@ const myClickHandler = async function (event) {
 
 // Attach the click event handler to the button
 fetchButton.addEventListener('click', myClickHandler);
+
+function updateOrientation(event) {    
+    // Update the orientation display
+    document.getElementById('alphaReadout').textContent = `z-axis rotation: ${Math.round(event.alpha)}°`;
+    document.getElementById('betaReadout').textContent = `x-axis rotation: ${Math.round(event.beta)}°`;
+    document.getElementById('gammaReadout').textContent = `y-axis rotation: ${Math.round(event.gamma)}°`;
+}
+
+window.addEventListener('deviceorientation', updateOrientation, true);
+
+if (DeviceOrientationEvent.requestPermission) { DeviceOrientationEvent.requestPermission(); };
