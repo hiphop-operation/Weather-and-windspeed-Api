@@ -177,7 +177,7 @@ const myClickHandler = async function (event) {
 
 
 // Attach the click event handler to the button
-orientationButton.addEventListener('click', myClickHandler);
+weatherButton.addEventListener('click', myClickHandler);
 
 function updateOrientation(event) {    
     // Update the orientation display
